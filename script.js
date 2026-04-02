@@ -62,3 +62,18 @@ document.addEventListener("keydown", (e) => {
     modal.style.display = "none";
   }
 });
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+  hamburger.textContent = navLinks.classList.contains('open') ? '✕' : '☰';
+});
+
+// Close menu when a link is clicked
+document.querySelectorAll('.nav-item').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    hamburger.textContent = '☰';
+  });
+});

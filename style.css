@@ -496,3 +496,124 @@ footer {
   background: var(--accent);
   color: #fff;
 }
+/* Hamburger button — hidden on desktop */
+.hamburger {
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--header-text);
+}
+
+@media (max-width: 768px) {
+
+  /* Header */
+  header {
+    padding: 1rem 1.2rem;
+  }
+
+  header h1 {
+    font-size: 1.3rem;
+  }
+
+  /* Show hamburger, hide nav by default */
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background: var(--header-bg);
+    padding: 1rem 0;
+    gap: 0;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    z-index: 999;
+    border-top: 1px solid var(--accent-glow);
+  }
+
+  /* When menu is open */
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--accent-glow);
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+  }
+
+  .dark-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 0.9rem;
+    margin: 0 auto;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 3rem 1.2rem;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .hero-text h2 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  /* Sections */
+  section {
+    padding: 3rem 1.2rem;
+  }
+
+  section h2 {
+    font-size: 1.8rem;
+  }
+
+  /* Skills */
+  .skills-list {
+    grid-template-columns: 1fr;
+  }
+
+  /* Projects */
+  .project-images {
+    flex-direction: column;
+    align-items: center;
+    overflow: visible;
+  }
+
+  figure {
+    width: 100%;
+  }
+
+  .project-pic {
+    width: 100%;
+    height: 200px;
+  }
+
+  figcaption {
+    width: 100%;
+  }
+
+  .project-pic:hover {
+    transform: none;
+  }
+}
